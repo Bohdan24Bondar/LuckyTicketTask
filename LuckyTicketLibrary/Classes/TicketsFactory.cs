@@ -29,9 +29,9 @@ namespace LuckyTicketLibrary
 
         public int NumbericsCount { get; private set; }
 
-        public List<ITicket> CrearyTickets()
+        public List<Ticket> CrearyTickets()
         {
-            List<ITicket> _plentyTickets = new List<ITicket>(_startRange - _finishRange);
+            List<Ticket> _plentyTickets = new List<Ticket>(_startRange - _finishRange);
 
             for (int ticketNumber = _startRange; ticketNumber < _finishRange; ticketNumber++)
             {

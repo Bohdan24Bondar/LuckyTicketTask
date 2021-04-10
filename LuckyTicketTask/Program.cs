@@ -10,6 +10,7 @@ namespace LuckyTicketTask
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }

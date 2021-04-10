@@ -41,21 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Ticket.cs" />
-    <Compile Include="Classes\LickyTicketEventArgs.cs" />
-    <Compile Include="Classes\MoskowLuckyTicket.cs" />
-    <Compile Include="Classes\PiterLuckyTicket.cs" />
-    <Compile Include="Interfaces\ITicket.cs" />
+    <Compile Include="Classes\MoskowLuckyTicketsAnalyzer.cs" />
+    <Compile Include="Classes\PiterLuckyTicketsAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\TicketsAnalyzer.cs" />
+    <Compile Include="Classes\LuckyTicketsAnalyzer.cs" />
     <Compile Include="Classes\TicketsFactory.cs" />
-    <Compile Include="Delegates\LickyTicketNotifyer.cs" />
+    <Compile Include="Classes\Ticket.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LuckyTicketTask\LuckyTicketTask.csproj">
       <Project>{6bc8852d-a487-4fa2-af9c-59e70a727a0b}</Project>
       <Name>LuckyTicketTask</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
