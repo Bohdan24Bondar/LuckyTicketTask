@@ -43,16 +43,15 @@
   <ItemGroup>
     <Compile Include="Classes\MoskowLuckyTicketsAnalyzer.cs" />
     <Compile Include="Classes\PiterLuckyTicketsAnalyzer.cs" />
+    <Compile Include="Classes\ConditionReader.cs" />
+    <Compile Include="Classes\DefaultSettings.cs" />
+    <Compile Include="Classes\NumbericsValidator.cs" />
+    <Compile Include="Classes\NumberConvertor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\LuckyTicketsAnalyzer.cs" />
-    <Compile Include="Classes\TicketsFactory.cs" />
+    <Compile Include="Classes\TicketsCreator.cs" />
     <Compile Include="Classes\Ticket.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LuckyTicketTask\LuckyTicketTask.csproj">
-      <Project>{6bc8852d-a487-4fa2-af9c-59e70a727a0b}</Project>
-      <Name>LuckyTicketTask</Name>
-    </ProjectReference>
+    <Compile Include="Classes\TicketValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public class Ticket 
+    public class NumberConvertor
     {
-        public string Number { get; private set; }
-
-        public Ticket(string number)
+        public int ConvertNumber(string number)
         {
-            Number = number;
+            return int.Parse(number);
         }
     }
 }

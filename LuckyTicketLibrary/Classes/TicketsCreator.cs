@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    class TicketsFactory
+    public class TicketsCreator
     {
         #region Private
 
@@ -15,23 +15,23 @@ namespace LuckyTicketLibrary
 
         #endregion
 
-        public TicketsFactory(int numbericsCount, int startRange, int finishRange)
+        public TicketsCreator(int numbericsCount, int startRange, int finishRange)
         {
             NumbericsCount = numbericsCount;
             _startRange = startRange;
             _finishRange = finishRange;
         }
 
-        public int StartZeroCount(int number)
+        public int NumbericsCount { get; private set; }
+
+        private int StartZeroCount(int number)
         {
             return NumbericsCount - number.ToString().Length;
         }
 
-        public int NumbericsCount { get; private set; }
-
-        public List<Ticket> CrearyTickets()
+        public List<Ticket> FillTickets()
         {
-            List<Ticket> _plentyTickets = new List<Ticket>(_startRange - _finishRange);
+            List<Ticket> _plentyTickets = new List<Ticket>(_finishRange - _startRange);
 
             for (int ticketNumber = _startRange; ticketNumber < _finishRange; ticketNumber++)
             {

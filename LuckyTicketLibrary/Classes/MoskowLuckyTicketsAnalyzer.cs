@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    class MoskowLuckyTicketsAnalyzer : LuckyTicketsAnalyzer
+    public class MoskowLuckyTicketsAnalyzer : LuckyTicketsAnalyzer
     {
         public MoskowLuckyTicketsAnalyzer(List<Ticket> tickets)
             : base(tickets)
@@ -22,7 +22,7 @@ namespace LuckyTicketLibrary
 
             for (int index = 0; index < number.Length; index++)
             {
-                if (number.Length < sideLenght)
+                if (sideLenght > index)
                 {
                     leftSide += number[index] - '0';
                 }
