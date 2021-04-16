@@ -8,11 +8,11 @@ namespace LuckyTicketLibrary
 {
     public class Ticket 
     {
-        public string Number { get; private set; }
-
         public Ticket(string number)
         {
             Number = number;
         }
+
+        public string Number { get; private set; }
     }
 }

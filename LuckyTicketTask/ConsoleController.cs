@@ -32,7 +32,7 @@ namespace LuckyTicketTask
             {
                 if (!File.Exists(PathToFile))
                 {
-                    // todo _consoleViewer. 
+                    _consoleViewer.ShowInstruction(DefaultSettings.INSTRUCTION);
                     return;
                 }
 
@@ -42,7 +42,7 @@ namespace LuckyTicketTask
 
                 if (!numberChecker.IsNumber())
                 {
-                    // todo _consoleViewer. 
+                    _consoleViewer.ShowInstruction(DefaultSettings.INSTRUCTION);
                     return;
                 }
 
@@ -53,13 +53,12 @@ namespace LuckyTicketTask
 
                 if (!checker.IsRightCondition() || !checker.IsFallenTheRange())
                 {
-                    // todo _consoleViewer. 
+                    _consoleViewer.ShowInstruction(DefaultSettings.INSTRUCTION);
                     return;
                 }
 
                 TicketsCreator creator = new TicketsCreator(DefaultSettings.NUMBERICS_COUNT, firstNumber, lastNumber);
                 List<Ticket> tickets = creator.FillTickets();
-
                 LuckyTicketsAnalyzer analyzer;
 
                 if (condition == DefaultSettings.MOSKOW_CONDITION)
@@ -72,12 +71,11 @@ namespace LuckyTicketTask
                 }
 
                 IEnumerable<Ticket> luckyTickets = analyzer.SearchLuckyTickets();
-
-                //_consoleViewer.ShowLuckyTickets(luckyTickets, analyzer.LickyTicketsCount);
+                _consoleViewer.ShowLuckyTickets(luckyTickets, analyzer.LickyTicketsCount);
             }
-            catch (IOException)
+            catch (IOException ex)
             {
-                throw;
+                _consoleViewer.ShowInstruction(ex.Message + DefaultSettings.INSTRUCTION);
             }
         }
     }

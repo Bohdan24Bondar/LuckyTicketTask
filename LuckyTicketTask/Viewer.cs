@@ -19,5 +19,11 @@ namespace LuckyTicketTask
                 Console.WriteLine(ticket.Number);
             }
         }
+
+        public void ShowInstruction(string instruction)
+        {
+            Console.Clear();
+            Console.WriteLine(instruction);
+        }
     }
 }

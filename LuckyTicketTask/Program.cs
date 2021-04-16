@@ -12,7 +12,7 @@ namespace LuckyTicketTask
     {
         static void Main(string[] args)
         {
-            ConsoleController application = new ConsoleController(DefaultSettings.PATH_TO_FILE, "1", "100000");
+            ConsoleController application = new ConsoleController(DefaultSettings.PATH_TO_FILE, "1", "5000");
             application.Run();
             Console.ReadKey();
         }

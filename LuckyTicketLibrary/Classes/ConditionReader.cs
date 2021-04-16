@@ -22,14 +22,7 @@ namespace LuckyTicketLibrary
 
             using (StreamReader reader = new StreamReader(PathToFile))
             {
-                try
-                {
-                    condition = reader.ReadLine();
-                }
-                catch (IOException)
-                {
-                    throw;
-                }
+                condition = reader.ReadLine();
             }
 
             return condition;
