@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public class PiterLuckyTicketsAnalyzer : LuckyTicketsAnalyzer
+    internal class PiterLuckyTicketsAnalyzer : LuckyTicketsAnalyzer, ITicketAnalyzer
     {
-        public PiterLuckyTicketsAnalyzer(List<Ticket> tickets)
+        public PiterLuckyTicketsAnalyzer(List<ITicket> tickets)
             : base(tickets)
         {
 

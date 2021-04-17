@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public class MoskowLuckyTicketsAnalyzer : LuckyTicketsAnalyzer
+    internal class MoskowLuckyTicketsAnalyzer : LuckyTicketsAnalyzer, ITicketAnalyzer
     {
-        public MoskowLuckyTicketsAnalyzer(List<Ticket> tickets)
+        public MoskowLuckyTicketsAnalyzer(List<ITicket> tickets)
             : base(tickets)
         {
 

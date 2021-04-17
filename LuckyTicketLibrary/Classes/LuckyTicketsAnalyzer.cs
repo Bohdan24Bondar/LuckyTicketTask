@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public abstract class LuckyTicketsAnalyzer
+    internal abstract class LuckyTicketsAnalyzer
     {
         #region Consts
 
@@ -17,11 +17,11 @@ namespace LuckyTicketLibrary
 
         #region Private
 
-        private readonly List<Ticket> _tickets;
+        private readonly List<ITicket> _tickets;
 
         #endregion
 
-        public LuckyTicketsAnalyzer(List<Ticket> tickets)
+        public LuckyTicketsAnalyzer(List<ITicket> tickets)
         {
             _tickets = tickets;
         }
@@ -30,9 +30,9 @@ namespace LuckyTicketLibrary
 
         public abstract bool IsLuckyTicket(string number);
 
-        public virtual IEnumerable<Ticket> SearchLuckyTickets() 
+        public virtual IEnumerable<ITicket> SearchLuckyTickets() 
         {
-            Queue<Ticket> luckyTikcketsBasket = new Queue<Ticket>();
+            Queue<ITicket> luckyTikcketsBasket = new Queue<ITicket>();
 
             for (int i = 0; i < _tickets.Count; i++)
             {

@@ -47,6 +47,11 @@
     <Compile Include="Classes\DefaultSettings.cs" />
     <Compile Include="Classes\NumbericsValidator.cs" />
     <Compile Include="Classes\NumberConvertor.cs" />
+    <Compile Include="Interfaces\ITicket.cs" />
+    <Compile Include="Interfaces\ITicketAnalyzer.cs" />
+    <Compile Include="Factories\MoskowTicketAnalyzerFactory.cs" />
+    <Compile Include="Factories\PiterTicketAnalyzerFactory.cs" />
+    <Compile Include="Factories\TicketAnalyzerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\LuckyTicketsAnalyzer.cs" />
     <Compile Include="Classes\TicketsCreator.cs" />

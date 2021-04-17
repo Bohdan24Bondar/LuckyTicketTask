@@ -9,7 +9,7 @@ namespace LuckyTicketTask
 {
     class Viewer
     {
-        public void ShowLuckyTickets(IEnumerable<Ticket> tickets, int ticketCount)
+        public void ShowLuckyTickets(IEnumerable<ITicket> tickets, int ticketCount)
         {
             Console.WriteLine("Count of lucky tickets = {0}", ticketCount);
             Console.WriteLine("Lucky tickets have next numbers:");
@@ -24,6 +24,7 @@ namespace LuckyTicketTask
         {
             Console.Clear();
             Console.WriteLine(instruction);
+            Console.ReadKey();
         }
     }
 }

@@ -29,9 +29,9 @@ namespace LuckyTicketLibrary
             return NumbericsCount - number.ToString().Length;
         }
 
-        public List<Ticket> FillTickets()
+        public List<ITicket> FillTickets()
         {
-            List<Ticket> _plentyTickets = new List<Ticket>(_finishRange - _startRange);
+            List<ITicket> _plentyTickets = new List<ITicket>(_finishRange - _startRange);
 
             for (int ticketNumber = _startRange; ticketNumber < _finishRange; ticketNumber++)
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public class Ticket 
+    internal class Ticket : ITicket
     {
         public Ticket(string number)
         {

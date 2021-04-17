@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketTask
 {
-    class ConsoleController
+    class ConsoleApplication
     {
         private Viewer _consoleViewer;
 
-        public ConsoleController(string pathToFile, string startRange, string finishRange)
+        public ConsoleApplication(string pathToFile, string startRange, string finishRange)
         {
             PathToFile = pathToFile;
             StartRange = startRange;
@@ -58,19 +58,9 @@ namespace LuckyTicketTask
                 }
 
                 TicketsCreator creator = new TicketsCreator(DefaultSettings.NUMBERICS_COUNT, firstNumber, lastNumber);
-                List<Ticket> tickets = creator.FillTickets();
-                LuckyTicketsAnalyzer analyzer;
-
-                if (condition == DefaultSettings.MOSKOW_CONDITION)
-                {
-                    analyzer = new MoskowLuckyTicketsAnalyzer(tickets);
-                }
-                else
-                {
-                    analyzer = new PiterLuckyTicketsAnalyzer(tickets);
-                }
-
-                IEnumerable<Ticket> luckyTickets = analyzer.SearchLuckyTickets();
+                List<ITicket> tickets = creator.FillTickets();
+                ITicketAnalyzer analyzer = GetLuckyTicketAnalyzer(tickets, condition);
+                IEnumerable<ITicket> luckyTickets = analyzer.SearchLuckyTickets();
                 _consoleViewer.ShowLuckyTickets(luckyTickets, analyzer.LickyTicketsCount);
             }
             catch (IOException ex)
@@ -78,5 +68,22 @@ namespace LuckyTicketTask
                 _consoleViewer.ShowInstruction(ex.Message + DefaultSettings.INSTRUCTION);
             }
         }
+
+        public ITicketAnalyzer GetLuckyTicketAnalyzer(List<ITicket> tickets, string condition)
+        {
+            TicketAnalyzerFactory factory;
+
+            if (condition == DefaultSettings.MOSKOW_CONDITION)
+            {
+                factory = new MoskowTicketAnalyzerFactory(tickets);
+            }
+            else
+            {
+                factory = new PiterTicketAnalyzerFactory(tickets);
+            }
+
+            return factory.Create();
+        }
+
     }
 }
