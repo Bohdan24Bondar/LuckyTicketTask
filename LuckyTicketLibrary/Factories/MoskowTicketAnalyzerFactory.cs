@@ -8,7 +8,7 @@ namespace LuckyTicketLibrary
 {
     public class MoskowTicketAnalyzerFactory : TicketAnalyzerFactory
     {
-        public MoskowTicketAnalyzerFactory(List<ITicket> tickets)
+        public MoskowTicketAnalyzerFactory(IEnumerable<ITicket> tickets)
             : base(tickets)
         {
 

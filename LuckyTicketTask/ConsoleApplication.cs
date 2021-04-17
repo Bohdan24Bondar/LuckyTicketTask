@@ -58,7 +58,7 @@ namespace LuckyTicketTask
                 }
 
                 TicketsCreator creator = new TicketsCreator(DefaultSettings.NUMBERICS_COUNT, firstNumber, lastNumber);
-                List<ITicket> tickets = creator.FillTickets();
+                IEnumerable<ITicket> tickets = creator.FillTickets();
                 ITicketAnalyzer analyzer = GetLuckyTicketAnalyzer(tickets, condition);
                 IEnumerable<ITicket> luckyTickets = analyzer.SearchLuckyTickets();
                 _consoleViewer.ShowLuckyTickets(luckyTickets, analyzer.LickyTicketsCount);
@@ -69,7 +69,7 @@ namespace LuckyTicketTask
             }
         }
 
-        public ITicketAnalyzer GetLuckyTicketAnalyzer(List<ITicket> tickets, string condition)
+        public ITicketAnalyzer GetLuckyTicketAnalyzer(IEnumerable<ITicket> tickets, string condition)
         {
             TicketAnalyzerFactory factory;
 

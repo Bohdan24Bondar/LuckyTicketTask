@@ -8,7 +8,7 @@ namespace LuckyTicketLibrary
 {
     internal class MoskowLuckyTicketsAnalyzer : LuckyTicketsAnalyzer, ITicketAnalyzer
     {
-        public MoskowLuckyTicketsAnalyzer(List<ITicket> tickets)
+        public MoskowLuckyTicketsAnalyzer(IEnumerable<ITicket> tickets)
             : base(tickets)
         {
 

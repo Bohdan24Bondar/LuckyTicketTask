@@ -9,7 +9,7 @@ namespace LuckyTicketLibrary
 {
     internal class PiterLuckyTicketsAnalyzer : LuckyTicketsAnalyzer, ITicketAnalyzer
     {
-        public PiterLuckyTicketsAnalyzer(List<ITicket> tickets)
+        public PiterLuckyTicketsAnalyzer(IEnumerable<ITicket> tickets)
             : base(tickets)
         {
 

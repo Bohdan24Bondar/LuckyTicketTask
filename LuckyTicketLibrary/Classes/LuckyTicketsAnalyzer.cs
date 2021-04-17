@@ -17,11 +17,11 @@ namespace LuckyTicketLibrary
 
         #region Private
 
-        private readonly List<ITicket> _tickets;
+        private readonly IEnumerable<ITicket> _tickets;
 
         #endregion
 
-        public LuckyTicketsAnalyzer(List<ITicket> tickets)
+        public LuckyTicketsAnalyzer(IEnumerable<ITicket> tickets)
         {
             _tickets = tickets;
         }
@@ -34,12 +34,21 @@ namespace LuckyTicketLibrary
         {
             Queue<ITicket> luckyTikcketsBasket = new Queue<ITicket>();
 
-            for (int i = 0; i < _tickets.Count; i++)
+            //for (int i = 0; i < _tickets.Count; i++)
+            //{
+            //    if (IsLuckyTicket(_tickets[i].Number))
+            //    {
+            //        LickyTicketsCount++;
+            //        luckyTikcketsBasket.Enqueue(_tickets[i]);
+            //    }
+            //}
+
+            foreach (var ticket in _tickets)
             {
-                if (IsLuckyTicket(_tickets[i].Number))
+                if (IsLuckyTicket(ticket.Number))
                 {
                     LickyTicketsCount++;
-                    luckyTikcketsBasket.Enqueue(_tickets[i]);
+                    luckyTikcketsBasket.Enqueue(ticket);
                 }
             }
 

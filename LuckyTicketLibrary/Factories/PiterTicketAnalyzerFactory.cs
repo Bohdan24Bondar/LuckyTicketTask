@@ -8,7 +8,7 @@ namespace LuckyTicketLibrary
 {
     public class PiterTicketAnalyzerFactory : TicketAnalyzerFactory
     {
-        public PiterTicketAnalyzerFactory(List<ITicket> tickets)
+        public PiterTicketAnalyzerFactory(IEnumerable<ITicket> tickets)
             : base(tickets)
         {
 

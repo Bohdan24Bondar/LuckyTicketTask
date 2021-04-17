@@ -8,9 +8,9 @@ namespace LuckyTicketLibrary
 {
     public abstract class TicketAnalyzerFactory
     {
-        protected readonly List<ITicket> _tickets;
+        protected readonly IEnumerable<ITicket> _tickets;
 
-        public TicketAnalyzerFactory(List<ITicket> tickets)
+        public TicketAnalyzerFactory(IEnumerable<ITicket> tickets)
         {
             _tickets = tickets;
         }
