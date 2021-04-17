@@ -6,49 +6,54 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public class TicketsCreator
+    internal class TicketsCreator : ITicketsCreator
     {
-        #region Private
-
-        private int _startRange;
-        private int _finishRange;
-
-        #endregion
-
         public TicketsCreator(int numbericsCount, int startRange, int finishRange)
         {
             NumbericsCount = numbericsCount;
-            _startRange = startRange;
-            _finishRange = finishRange;
+            StartRange = startRange;
+            FinishRange = finishRange;
         }
 
         public int NumbericsCount { get; private set; }
+
+        public int StartRange { get; private set; }
+
+        public int FinishRange { get; private set; }
+
+        public TicketsCreatorFactory TicketsCreatorFactory
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
         private int StartZeroCount(int number)
         {
             return NumbericsCount - number.ToString().Length;
         }
 
-        public List<ITicket> FillTickets()
+        public IEnumerable<ITicket> GetTickets()
         {
-            List<ITicket> _plentyTickets = new List<ITicket>(_finishRange - _startRange);
+            List<ITicket> plentyTickets = new List<ITicket>(FinishRange - StartRange);
 
-            for (int ticketNumber = _startRange; ticketNumber < _finishRange; ticketNumber++)
+            for (int ticketNumber = StartRange; ticketNumber < FinishRange; ticketNumber++)
             {
                 if (ticketNumber.ToString().Length < NumbericsCount)
                 {
                     string zeros = string.Empty;
                     zeros = zeros.PadLeft(StartZeroCount(ticketNumber), '0');
                     string number = string.Format("{0}{1}", zeros, ticketNumber);
-                    _plentyTickets.Add(new Ticket(number));
+                    plentyTickets.Add(new Ticket(number));
                 }
                 else
                 {
-                    _plentyTickets.Add(new Ticket(ticketNumber.ToString()));
+                    plentyTickets.Add(new Ticket(ticketNumber.ToString()));
                 }
             }
 
-            return _plentyTickets;
+            return plentyTickets;
         }     
     }
 }

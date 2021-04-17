@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public class TicketValidator
+    internal class TicketValidator : ITicketValidator
     {
         public TicketValidator(string condition, int startRange, int finishRange)
         {

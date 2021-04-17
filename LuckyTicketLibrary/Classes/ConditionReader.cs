@@ -7,7 +7,7 @@ using System.IO;
 
 namespace LuckyTicketLibrary
 {
-    public class ConditionReader
+    internal class ConditionReader : IConditionReader
     {
         public ConditionReader(string pathToFile)
         {
@@ -15,6 +15,14 @@ namespace LuckyTicketLibrary
         }
 
         public string PathToFile { get; private set; }
+
+        public ConditionReaderFactory ConditionReaderFactory
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
         public string GetCondition()
         {

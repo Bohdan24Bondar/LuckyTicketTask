@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public class NumbericsValidator
+    public class NumbericsValidator : INumbericsValidator
     {
         public bool IsNumber(params string [] numbers)
         {

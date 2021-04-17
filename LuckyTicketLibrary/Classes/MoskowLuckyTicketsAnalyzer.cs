@@ -18,7 +18,7 @@ namespace LuckyTicketLibrary
         {
             int leftSide = 0;
             int rightSide = 0;
-            int sideLenght = number.Length / DIVIDER;
+            int sideLenght = number.Length / DefaultSettings.DIVIDER;
 
             for (int index = 0; index < number.Length; index++)
             {

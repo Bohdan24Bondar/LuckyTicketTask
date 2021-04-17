@@ -1,6 +1,7 @@
 ﻿using LuckyTicketLibrary;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,12 @@ namespace LuckyTicketTask
 {
     class ConsoleApplication
     {
+
+        #region Private
+
         private Viewer _consoleViewer;
+
+        #endregion
 
         public ConsoleApplication(string pathToFile, string startRange, string finishRange)
         {
@@ -36,9 +42,9 @@ namespace LuckyTicketTask
                     return;
                 }
 
-                ConditionReader reader = new ConditionReader(PathToFile);
+                IConditionReader reader = GetConditionReader();
                 string condition = reader.GetCondition();
-                NumbericsValidator numberChecker = new NumbericsValidator();
+                INumbericsValidator numberChecker = GetINumbericsValidator();
 
                 if (!numberChecker.IsNumber())
                 {
@@ -46,10 +52,10 @@ namespace LuckyTicketTask
                     return;
                 }
 
-                NumberConvertor convertor = new NumberConvertor();
-                int firstNumber = convertor.ConvertNumber(StartRange);
-                int lastNumber = convertor.ConvertNumber(FinishRange);
-                TicketValidator checker = new TicketValidator(condition, firstNumber, lastNumber);
+                //NumberConvertor convertor = new NumberConvertor();
+                int firstNumber = int.Parse(StartRange);
+                int lastNumber = int.Parse(FinishRange);
+                ITicketValidator checker = GetTicketValidator(condition, firstNumber, lastNumber);
 
                 if (!checker.IsRightCondition() || !checker.IsFallenTheRange())
                 {
@@ -57,8 +63,9 @@ namespace LuckyTicketTask
                     return;
                 }
 
-                TicketsCreator creator = new TicketsCreator(DefaultSettings.NUMBERICS_COUNT, firstNumber, lastNumber);
-                IEnumerable<ITicket> tickets = creator.FillTickets();
+                ITicketsCreator creator = GetTicketsCreator(DefaultSettings.NUMBERICS_COUNT, 
+                        firstNumber, lastNumber);
+                IEnumerable<ITicket> tickets = creator.GetTickets();
                 ITicketAnalyzer analyzer = GetLuckyTicketAnalyzer(tickets, condition);
                 IEnumerable<ITicket> luckyTickets = analyzer.SearchLuckyTickets();
                 _consoleViewer.ShowLuckyTickets(luckyTickets, analyzer.LickyTicketsCount);
@@ -69,7 +76,8 @@ namespace LuckyTicketTask
             }
         }
 
-        public ITicketAnalyzer GetLuckyTicketAnalyzer(IEnumerable<ITicket> tickets, string condition)
+        public ITicketAnalyzer GetLuckyTicketAnalyzer(IEnumerable<ITicket> tickets, 
+                string condition)
         {
             TicketAnalyzerFactory factory;
 
@@ -85,5 +93,36 @@ namespace LuckyTicketTask
             return factory.Create();
         }
 
+        public ITicketsCreator GetTicketsCreator(int numbericsCount, int startRange, 
+                int finishRange)
+        {
+            TicketsCreatorFactory creatorFactory = new TicketsCreatorFactory(numbericsCount,
+                    startRange, finishRange);
+
+            return creatorFactory.Create();
+        }
+
+        public IConditionReader GetConditionReader()
+        {
+            ConditionReaderFactory readerFactory = new ConditionReaderFactory(PathToFile);
+
+            return readerFactory.Create();
+        }
+
+        public ITicketValidator GetTicketValidator(string condition, int startRange,
+                int finishRange)
+        {
+            TicketValidatorFactory validatorFactory = new TicketValidatorFactory(condition, 
+                    startRange, finishRange);
+
+            return validatorFactory.Create();
+        }
+
+        public INumbericsValidator GetINumbericsValidator()
+        {
+            NumbericsValidatorFactory factory = new NumbericsValidatorFactory();
+
+            return factory.Create();
+        }
     }
 }

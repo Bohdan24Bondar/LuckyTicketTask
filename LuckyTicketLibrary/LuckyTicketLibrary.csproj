@@ -47,16 +47,24 @@
     <Compile Include="Classes\DefaultSettings.cs" />
     <Compile Include="Classes\NumbericsValidator.cs" />
     <Compile Include="Classes\NumberConvertor.cs" />
+    <Compile Include="Factories\ConditionReaderFactory.cs" />
+    <Compile Include="Interfaces\IConditionReader.cs" />
     <Compile Include="Interfaces\ITicket.cs" />
     <Compile Include="Interfaces\ITicketAnalyzer.cs" />
     <Compile Include="Factories\MoskowTicketAnalyzerFactory.cs" />
     <Compile Include="Factories\PiterTicketAnalyzerFactory.cs" />
     <Compile Include="Factories\TicketAnalyzerFactory.cs" />
+    <Compile Include="Interfaces\ITicketsCreator.cs" />
+    <Compile Include="Interfaces\ITicketValidator.cs" />
+    <Compile Include="Interfaces\INumbericsValidator.cs" />
+    <Compile Include="Factories\NumbericsValidatorFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\LuckyTicketsAnalyzer.cs" />
     <Compile Include="Classes\TicketsCreator.cs" />
     <Compile Include="Classes\Ticket.cs" />
     <Compile Include="Classes\TicketValidator.cs" />
+    <Compile Include="Factories\TicketsCreatorFactory.cs" />
+    <Compile Include="Factories\TicketValidatorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

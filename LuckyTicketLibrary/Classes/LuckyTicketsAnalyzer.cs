@@ -7,14 +7,8 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    internal abstract class LuckyTicketsAnalyzer
+    internal abstract class LuckyTicketsAnalyzer : ITicketAnalyzer
     {
-        #region Consts
-
-        public const int DIVIDER = 2;
-
-        #endregion
-
         #region Private
 
         private readonly IEnumerable<ITicket> _tickets;
@@ -28,20 +22,19 @@ namespace LuckyTicketLibrary
 
         public int LickyTicketsCount { get; protected set; }
 
+        public TicketAnalyzerFactory TicketAnalyzerFactory
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public abstract bool IsLuckyTicket(string number);
 
         public virtual IEnumerable<ITicket> SearchLuckyTickets() 
         {
             Queue<ITicket> luckyTikcketsBasket = new Queue<ITicket>();
-
-            //for (int i = 0; i < _tickets.Count; i++)
-            //{
-            //    if (IsLuckyTicket(_tickets[i].Number))
-            //    {
-            //        LickyTicketsCount++;
-            //        luckyTikcketsBasket.Enqueue(_tickets[i]);
-            //    }
-            //}
 
             foreach (var ticket in _tickets)
             {

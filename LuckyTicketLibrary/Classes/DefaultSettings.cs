@@ -8,6 +8,7 @@ namespace LuckyTicketLibrary
 {
     public class DefaultSettings
     {
+        public const int DIVIDER = 2;
         public const string MOSKOW_CONDITION = "Moskow";
         public const string PITER_CONDITION = "Piter";
         public const string PATH_TO_FILE = "..\\Condition.txt";
