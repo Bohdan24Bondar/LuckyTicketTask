@@ -14,15 +14,14 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\MoskowLuckyTicketsAnalyzer.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="LuckyTicketLibrary.PiterLuckyTicketsAnalyzer">
     <Position X="9.5" Y="5.75" Width="1.5" />
     <InheritanceLine Type="LuckyTicketLibrary.LuckyTicketsAnalyzer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="9.375" Y="3.892" />
-        <Point X="9.375" Y="5.236" />
-        <Point X="10.25" Y="5.236" />
+        <Point X="9.375" Y="5.396" />
+        <Point X="10.25" Y="5.396" />
         <Point X="10.25" Y="5.75" />
       </Path>
     </InheritanceLine>
@@ -31,38 +30,31 @@
       <FileName>Classes\PiterLuckyTicketsAnalyzer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LuckyTicketLibrary.TicketAnalyzerFactory">
-    <Position X="3.25" Y="3" Width="1.5" />
+  <Class Name="LuckyTicketLibrary.LuckyTicketAnalyzerFactory">
+    <Position X="2" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAAAAAAAAAA=</HashCode>
-      <FileName>Factories\TicketAnalyzerFactory.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\LuckyTicketAnalyzerFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LuckyTicketLibrary.TicketsCreator">
-    <Position X="3.25" Y="7.75" Width="1.5" />
+  <Class Name="LuckyTicketLibrary.TicketsFiller">
+    <Position X="2.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAABBQAAAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>Classes\TicketsCreator.cs</FileName>
+      <FileName>Classes\TicketsFiller.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LuckyTicketLibrary.ConditionReader">
-    <Position X="10.75" Y="2.5" Width="1.5" />
+    <Position X="10.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\ConditionReader.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="LuckyTicketLibrary.NumberConvertor">
-    <Position X="19" Y="8" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Classes\NumberConvertor.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="LuckyTicketLibrary.NumbericsValidator">
-    <Position X="12.75" Y="7.5" Width="1.5" />
+    <Position X="12.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\NumbericsValidator.cs</FileName>
@@ -70,107 +62,107 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LuckyTicketLibrary.TicketValidator">
-    <Position X="12.75" Y="2.5" Width="1.5" />
+    <Position X="14.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAIAgAAAAAA=</HashCode>
       <FileName>Classes\TicketValidator.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.141" />
   </Class>
-  <Class Name="LuckyTicketLibrary.DefaultSettings" Collapsed="true">
-    <Position X="16.5" Y="1.25" Width="1.5" />
+  <Class Name="LuckyTicketLibrary.DefaultSettings">
+    <Position X="16.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAIAwACAAAAAAAAAAAAAAAAAACAAAAIAAAAAAAAAAAA=</HashCode>
+      <HashCode>GAIAwACAAAAAAAAAAAEAAAAAACAAAAIAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\DefaultSettings.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LuckyTicketLibrary.TicketValidatorFactory" Collapsed="true">
-    <Position X="15.25" Y="2.5" Width="1.5" />
+  <Class Name="LuckyTicketLibrary.TicketValidatorFactory">
+    <Position X="14.25" Y="5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAIEAAAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\TicketValidatorFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LuckyTicketLibrary.TicketsCreatorFactory" Collapsed="true">
-    <Position X="5.5" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAAAAAEAAAAABA=</HashCode>
-      <FileName>Factories\TicketsCreatorFactory.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LuckyTicketLibrary.PiterTicketAnalyzerFactory" Collapsed="true">
-    <Position X="4.5" Y="5.25" Width="1.5" />
+  <Class Name="LuckyTicketLibrary.PiterTicketAnalyzerFactory">
+    <Position X="3.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\PiterTicketAnalyzerFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LuckyTicketLibrary.NumbericsValidatorFactory" Collapsed="true">
-    <Position X="15" Y="7.75" Width="2.25" />
+  <Class Name="LuckyTicketLibrary.NumbericsValidatorFactory">
+    <Position X="12.25" Y="8.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\NumbericsValidatorFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LuckyTicketLibrary.MoskowTicketAnalyzerFactory" Collapsed="true">
-    <Position X="2" Y="5.25" Width="1.5" />
+  <Class Name="LuckyTicketLibrary.MoskowTicketAnalyzerFactory">
+    <Position X="0.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\MoskowTicketAnalyzerFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LuckyTicketLibrary.ConditionReaderFactory" Collapsed="true">
-    <Position X="10.75" Y="4.75" Width="1.75" />
+  <Class Name="LuckyTicketLibrary.ConditionReaderFactory">
+    <Position X="10.5" Y="4.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\ConditionReaderFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LuckyTicketLibrary.Ticket" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16.5" Y="5.5" Width="1.5" />
+  <Class Name="LuckyTicketLibrary.Ticket" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Ticket.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Interface Name="LuckyTicketLibrary.ITicketValidator" Collapsed="true">
-    <Position X="12.75" Y="1.5" Width="1.5" />
+  <Class Name="LuckyTicketLibrary.TicketsFillerFactory">
+    <Position X="2" Y="9.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\TicketsFillerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="LuckyTicketLibrary.ITicketValidator">
+    <Position X="14.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Interfaces\ITicketValidator.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="LuckyTicketLibrary.ITicketsCreator" Collapsed="true">
-    <Position X="3.25" Y="6.75" Width="1.5" />
+  <Interface Name="LuckyTicketLibrary.ITicketsFiller">
+    <Position X="2.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\ITicketsCreator.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="LuckyTicketLibrary.ITicketAnalyzer" Collapsed="true">
+  <Interface Name="LuckyTicketLibrary.ILuckyTicketAnalyzer" Collapsed="true">
     <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAEAgAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Interfaces\ITicketAnalyzer.cs</FileName>
+      <FileName>Interfaces\ILuckyTicketAnalyzer.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="LuckyTicketLibrary.ITicket" Collapsed="true">
-    <Position X="16.5" Y="4.5" Width="1.5" />
+  <Interface Name="LuckyTicketLibrary.ITicket">
+    <Position X="5.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\ITicket.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="LuckyTicketLibrary.INumbericsValidator" Collapsed="true">
-    <Position X="12.75" Y="6.5" Width="1.5" />
+  <Interface Name="LuckyTicketLibrary.INumbericsValidator">
+    <Position X="12.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\INumbericsValidator.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="LuckyTicketLibrary.IConditionReader" Collapsed="true">
-    <Position X="10.75" Y="1.5" Width="1.5" />
+  <Interface Name="LuckyTicketLibrary.IConditionReader">
+    <Position X="10.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IConditionReader.cs</FileName>

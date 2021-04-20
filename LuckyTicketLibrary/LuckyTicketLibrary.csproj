@@ -46,7 +46,6 @@
     <Compile Include="Classes\ConditionReader.cs" />
     <Compile Include="Classes\DefaultSettings.cs" />
     <Compile Include="Classes\NumbericsValidator.cs" />
-    <Compile Include="Classes\NumberConvertor.cs" />
     <Compile Include="Factories\ConditionReaderFactory.cs" />
     <Compile Include="Interfaces\IConditionReader.cs" />
     <Compile Include="Interfaces\ITicket.cs" />
@@ -63,7 +62,7 @@
     <Compile Include="Classes\TicketsFiller.cs" />
     <Compile Include="Classes\Ticket.cs" />
     <Compile Include="Classes\TicketValidator.cs" />
-    <Compile Include="Factories\TicketsCreatorFactory.cs" />
+    <Compile Include="Factories\TicketsFillerFactory.cs" />
     <Compile Include="Factories\TicketValidatorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
