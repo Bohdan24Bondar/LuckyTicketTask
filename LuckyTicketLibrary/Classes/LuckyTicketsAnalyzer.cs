@@ -22,17 +22,9 @@ namespace LuckyTicketLibrary
 
         public int LickyTicketsCount { get; protected set; }
 
-        public TicketAnalyzerFactory TicketAnalyzerFactory
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         public abstract bool IsLuckyTicket(string number);
 
-        public virtual IEnumerable<ITicket> SearchLuckyTickets() 
+        public virtual IEnumerable<ITicket> GetLuckyTickets() 
         {
             Queue<ITicket> luckyTikcketsBasket = new Queue<ITicket>();
 

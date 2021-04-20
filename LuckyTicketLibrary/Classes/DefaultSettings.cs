@@ -19,5 +19,8 @@ namespace LuckyTicketLibrary
                 "Codition must be \"Moskow\" or \"Piter\"\n" +
                 "2 - start range of tickets number from 1\n" +
                 "3 - finish range of tickets number to 999999";
+        public const string WRONG_FORMAT_NUMBERS = "Introduced parameters are not numbers!";
+        public const string WRONG_ARGS = "Introduced parameters are wrong\n" +
+            "Check condition of algorithm or range of numbers of ticket";
     }
 }

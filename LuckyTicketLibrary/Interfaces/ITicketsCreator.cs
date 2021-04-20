@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public interface ITicketsCreator
+    public interface ITicketsFiller
     {
         IEnumerable<ITicket> GetTickets();
     }

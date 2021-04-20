@@ -12,10 +12,29 @@ namespace LuckyTicketTask
     {
         static void Main(string[] args)
         {
-            ConsoleApplication application = new ConsoleApplication(DefaultSettings.PATH_TO_FILE, "1", "5000");
-            application.Run();
+            try
+            {
+                ConditionReaderFactory readerFactory = new ConditionReaderFactory();
+                IConditionReader reader = readerFactory.Create(DefaultSettings.PATH_TO_FILE);
+                NumbericsValidatorFactory numbersCheckerFactory = new NumbericsValidatorFactory();
+                INumbericsValidator numbersChecker = numbersCheckerFactory.Create();
+                TicketValidatorFactory ticketCheckerFactory = new TicketValidatorFactory();
+                TicketsFillerFactory fillerFactory = new TicketsFillerFactory();
+                IViewer illustrator = new ConsoleView();
+
+                ConsoleController application = new ConsoleController(DefaultSettings.PATH_TO_FILE,
+                        "1", "5000", reader, ticketCheckerFactory, fillerFactory, numbersChecker,
+                        illustrator);
+
+                application.Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(DefaultSettings.INSTRUCTION);
+            }
+
             Console.ReadKey();
-            
         }
     }
 }

@@ -8,15 +8,9 @@ namespace LuckyTicketLibrary
 {
     public class MoskowTicketAnalyzerFactory : TicketAnalyzerFactory
     {
-        public MoskowTicketAnalyzerFactory(IEnumerable<ITicket> tickets)
-            : base(tickets)
+        public override ITicketAnalyzer Create(IEnumerable<ITicket> tickets)
         {
-
-        }
-
-        public override ITicketAnalyzer Create()
-        {
-            return new MoskowLuckyTicketsAnalyzer(_tickets);
+            return new MoskowLuckyTicketsAnalyzer(tickets);
         }
     }
 }

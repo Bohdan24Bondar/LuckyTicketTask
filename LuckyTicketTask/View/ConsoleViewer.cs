@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketTask
 {
-    class Viewer
+    class ConsoleView : IViewer
     {
         public void ShowLuckyTickets(IEnumerable<ITicket> tickets, int ticketCount)
         {
@@ -20,10 +20,10 @@ namespace LuckyTicketTask
             }
         }
 
-        public void ShowInstruction(string instruction)
+        public void ShowMessage(string message)
         {
             Console.Clear();
-            Console.WriteLine(instruction);
+            Console.WriteLine(message);
             Console.ReadKey();
         }
     }

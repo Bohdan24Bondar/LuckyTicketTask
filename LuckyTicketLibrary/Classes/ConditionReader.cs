@@ -16,14 +16,6 @@ namespace LuckyTicketLibrary
 
         public string PathToFile { get; private set; }
 
-        public ConditionReaderFactory ConditionReaderFactory
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         public string GetCondition()
         {
             string condition = string.Empty;

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    internal class TicketsCreator : ITicketsCreator
+    internal class TicketsFiller : ITicketsFiller
     {
-        public TicketsCreator(int numbericsCount, int startRange, int finishRange)
+        public TicketsFiller(int numbericsCount, int startRange, int finishRange)
         {
             NumbericsCount = numbericsCount;
             StartRange = startRange;
@@ -20,14 +20,6 @@ namespace LuckyTicketLibrary
         public int StartRange { get; private set; }
 
         public int FinishRange { get; private set; }
-
-        public TicketsCreatorFactory TicketsCreatorFactory
-        {
-            get => default;
-            set
-            {
-            }
-        }
 
         private int StartZeroCount(int number)
         {

@@ -12,6 +12,6 @@ namespace LuckyTicketLibrary
         
         bool IsLuckyTicket(string number);
 
-        IEnumerable<ITicket> SearchLuckyTickets();
+        IEnumerable<ITicket> GetLuckyTickets();
     }
 }

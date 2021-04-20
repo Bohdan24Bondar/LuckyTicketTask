@@ -6,26 +6,11 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public class TicketsCreatorFactory
+    public class TicketsFillerFactory
     {
-        #region Private
-
-        private int _numbericsCount;
-        private int _startRange;
-        private int _finishRange;
-
-        #endregion
-
-        public TicketsCreatorFactory(int numbericsCount, int startRange, int finishRange)
+        public virtual ITicketsFiller Create(int numbericsCount, int startRange, int finishRange)
         {
-            _numbericsCount = numbericsCount;
-            _startRange = startRange;
-            _finishRange = finishRange;
-        }
-
-        public virtual ITicketsCreator Create()
-        {
-            return new TicketsCreator(_numbericsCount, _startRange, _finishRange);
+            return new TicketsFiller(numbericsCount, startRange, finishRange);
         }
     }
 }

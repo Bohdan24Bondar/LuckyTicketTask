@@ -8,21 +8,9 @@ namespace LuckyTicketLibrary
 {
     public class ConditionReaderFactory
     {
-
-        #region Private
-
-        private string _pathToFile;
-
-        #endregion
-
-        public ConditionReaderFactory(string pathToFile)
+        public virtual IConditionReader Create(string pathToFile)
         {
-            _pathToFile = pathToFile;
-        }
-
-        public virtual IConditionReader Create()
-        {
-            return new ConditionReader(_pathToFile);
+            return new ConditionReader(pathToFile);
         }
     }
 }

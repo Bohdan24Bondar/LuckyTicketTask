@@ -8,26 +8,7 @@ namespace LuckyTicketLibrary
 {
     public class NumbericsValidatorFactory
     {
-        #region Private
-
-        private string[] _numbers;
-
-        #endregion
-
-        public NumbericsValidatorFactory(params string[] numbers)
-        {
-            _numbers = numbers;
-        }
-
-        public NumbericsValidator NumbericsValidator
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public virtual INumbericsValidator Create()
+        public virtual INumbericsValidator Create(params string[] numbers)
         {
             return new NumbericsValidator();
         }
