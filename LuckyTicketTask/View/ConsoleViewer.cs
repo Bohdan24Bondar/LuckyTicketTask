@@ -9,10 +9,18 @@ namespace LuckyTicketTask
 {
     class ConsoleView : IViewer
     {
+        #region Constants
+
+        public const string COUNT_MESSAGE = "Count of lucky tickets =";
+        public const string NUMBER_MESSAGE = "Lucky tickets have next numbers:";
+
+        #endregion
+
         public void ShowLuckyTickets(IEnumerable<ITicket> tickets, int ticketCount)
         {
-            Console.WriteLine("Count of lucky tickets = {0}", ticketCount);
-            Console.WriteLine("Lucky tickets have next numbers:");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("{0} {1}", COUNT_MESSAGE, ticketCount);
+            Console.WriteLine(NUMBER_MESSAGE);
 
             foreach (var ticket in tickets)
             {
@@ -22,6 +30,7 @@ namespace LuckyTicketTask
 
         public void ShowMessage(string message)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.Clear();
             Console.WriteLine(message);
             Console.ReadKey();
