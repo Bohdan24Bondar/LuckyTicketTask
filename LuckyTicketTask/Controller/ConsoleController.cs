@@ -78,7 +78,7 @@ namespace LuckyTicketTask
                 ITicketsFiller ticketsCreator = _fillerFactory.Create(DefaultSettings.NUMBERICS_COUNT, 
                         firstNumber, lastNumber);
                 IEnumerable<ITicket> tickets = ticketsCreator.GetTickets();
-                ITicketAnalyzer analyzer = GetLuckyTicketAnalyzer(tickets, condition);
+                ILuckyTicketAnalyzer analyzer = GetLuckyTicketAnalyzer(tickets, condition);
                 IEnumerable<ITicket> luckyTickets = analyzer.GetLuckyTickets();
                 _illustrator.ShowLuckyTickets(luckyTickets, analyzer.LickyTicketsCount);
             }
@@ -99,18 +99,22 @@ namespace LuckyTicketTask
             }
         }
 
-        public ITicketAnalyzer GetLuckyTicketAnalyzer(IEnumerable<ITicket> tickets, 
+        public ILuckyTicketAnalyzer GetLuckyTicketAnalyzer(IEnumerable<ITicket> tickets, 
                 string condition)
         {
-            TicketAnalyzerFactory factory;
+            LuckyTicketAnalyzerFactory factory = null;
 
-            if (condition == DefaultSettings.MOSKOW_CONDITION)
+            switch (condition)
             {
-                factory = new MoskowTicketAnalyzerFactory();
-            }
-            else
-            {
-                factory = new PiterTicketAnalyzerFactory();
+                case "Moskow":
+                    factory = new MoskowTicketAnalyzerFactory();
+                    break;
+                case "Piter":
+                    factory = new PiterTicketAnalyzerFactory();
+                    break;
+                default:
+                    _illustrator.ShowMessage(DefaultSettings.INSTRUCTION);
+                    break;
             }
 
             return factory.Create(tickets);

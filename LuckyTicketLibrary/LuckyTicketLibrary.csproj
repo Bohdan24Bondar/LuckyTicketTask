@@ -50,10 +50,10 @@
     <Compile Include="Factories\ConditionReaderFactory.cs" />
     <Compile Include="Interfaces\IConditionReader.cs" />
     <Compile Include="Interfaces\ITicket.cs" />
-    <Compile Include="Interfaces\ITicketAnalyzer.cs" />
+    <Compile Include="Interfaces\ILuckyTicketAnalyzer.cs" />
     <Compile Include="Factories\MoskowTicketAnalyzerFactory.cs" />
     <Compile Include="Factories\PiterTicketAnalyzerFactory.cs" />
-    <Compile Include="Factories\TicketAnalyzerFactory.cs" />
+    <Compile Include="Factories\LuckyTicketAnalyzerFactory.cs" />
     <Compile Include="Interfaces\ITicketsCreator.cs" />
     <Compile Include="Interfaces\ITicketValidator.cs" />
     <Compile Include="Interfaces\INumbericsValidator.cs" />

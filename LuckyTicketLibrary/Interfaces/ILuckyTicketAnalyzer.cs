@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public interface ITicketAnalyzer
+    public interface ILuckyTicketAnalyzer
     {
         int LickyTicketsCount { get; }
         

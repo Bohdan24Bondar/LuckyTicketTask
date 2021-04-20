@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    internal abstract class LuckyTicketsAnalyzer : ITicketAnalyzer
+    internal abstract class LuckyTicketsAnalyzer : ILuckyTicketAnalyzer
     {
         #region Private
 

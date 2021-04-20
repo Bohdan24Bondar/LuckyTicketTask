@@ -22,7 +22,7 @@ namespace LuckyTicketLibrary
 
             for (int index = 0; index < number.Length; index++)
             {
-                if ((number[index] % DefaultSettings.DIVIDER) == 0)
+                if ((index % DefaultSettings.DIVIDER) == 0)
                 {
                     evenSum += number[index] - '0';
                 }

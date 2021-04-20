@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public class PiterTicketAnalyzerFactory : TicketAnalyzerFactory
+    public class PiterTicketAnalyzerFactory : LuckyTicketAnalyzerFactory
     {
-        public override ITicketAnalyzer Create(IEnumerable<ITicket> tickets)
+        public override ILuckyTicketAnalyzer Create(IEnumerable<ITicket> tickets)
         {
             return new PiterLuckyTicketsAnalyzer(tickets);
         }

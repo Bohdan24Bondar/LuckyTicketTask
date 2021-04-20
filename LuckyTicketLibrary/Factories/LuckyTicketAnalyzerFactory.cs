@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace LuckyTicketLibrary
 {
-    public abstract class TicketAnalyzerFactory
+    public abstract class LuckyTicketAnalyzerFactory
     {
-        public abstract ITicketAnalyzer Create(IEnumerable<ITicket> tickets);
+        public abstract ILuckyTicketAnalyzer Create(IEnumerable<ITicket> tickets);
     }
 }

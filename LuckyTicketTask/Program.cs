@@ -23,7 +23,7 @@ namespace LuckyTicketTask
                 IViewer illustrator = new ConsoleView();
 
                 ConsoleController application = new ConsoleController(DefaultSettings.PATH_TO_FILE,
-                        "1", "5000", reader, ticketCheckerFactory, fillerFactory, numbersChecker,
+                        "1000", "2000", reader, ticketCheckerFactory, fillerFactory, numbersChecker,
                         illustrator);
 
                 application.Run();
