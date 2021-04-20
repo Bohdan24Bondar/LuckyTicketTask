@@ -54,7 +54,7 @@ namespace LuckyTicketTask
 
                 string condition = _reader.GetCondition();
 
-                if (!_numbersChecker.IsNumber())
+                if (!_numbersChecker.IsNumber(StartRange, FinishRange))
                 {
                     string message = string.Format("{0}\n{1}",
                             DefaultSettings.WRONG_FORMAT_NUMBERS, DefaultSettings.INSTRUCTION);
